@@ -1,0 +1,58 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{proof}
+\usepackage[scaled]{helvet}
+\renewcommand\familydefault{\sfdefault} 
+\usepackage[T1]{fontenc}
+\usepackage{color}
+\usetheme{berkeley}
+
+\title{Tutoria de Matem\'atica Discreta}
+\subtitle{}
+\author[R. P. Duarte]{Rafael Pereira Duarte}
+\institute[UFOP]{
+  Departamento de Computa\c{c}\~ao e Sistemas\\
+  Universidade de Federal de Ouro Preto
+}
+\date{\today}
+\begin{document}
+	\begin{frame}[plain]
+		\titlepage
+	\end{frame}
+	\begin{frame}{}
+		\begin{block}{Exercício 3.11}
+		1. Prove as seguintes equivalências utilizando regras algébricas para a lógica de predicados
+		\end{block}
+	\end{frame}
+	\begin{frame}{}
+		\begin{block}{}
+		$\lnot\forall x.\exists y.R(x,y)\land\lnot P(x,y)$
+		\end{block}
+	\end{frame}
+	\begin{frame}{}
+		\begin{block}{}
+		$\lnot\forall x.\exists y.R(x,y)\land\lnot P(x,y)\newline\exists x.\lnot(\exists y.R(x,y)\land\lnot P(x,y))$
+		\end{block}
+	\end{frame}
+	\begin{frame}{}
+		\begin{block}{}
+		$\lnot\forall x.\exists y.R(x,y)\land\lnot P(x,y)\newline\exists x.\lnot(\exists y.R(x,y)\land\lnot P(x,y))\newline
+		\exists x. \forall y.\lnot(R(x,y)\land\lnot P(x,y))$
+		\end{block}
+	\end{frame}
+	\begin{frame}{}
+		\begin{block}{}
+		$\lnot\forall x.\exists y.R(x,y)\land\lnot P(x,y)\newline\exists x.\lnot(\exists y.R(x,y)\land\lnot P(x,y))\newline
+		\exists x. \forall y.\lnot(R(x,y)\land\lnot P(x,y))\newline\exists x.\forall y.\lnot R(x,y)\lor P(x,y)$
+		\end{block}
+	\end{frame}
+	\begin{frame}{}
+		\begin{block}{}
+		$\lnot\forall x.\exists y.R(x,y)\land\lnot P(x,y)\newline\exists x.\lnot(\exists y.R(x,y)\land\lnot P(x,y))\newline
+		\exists x. \forall y.\lnot(R(x,y)\land\lnot P(x,y))\newline\exists x.\forall y.\lnot R(x,y)\lor P(x,y)\newline\exists x.\forall y.R(x,y)\rightarrow  P(x,y)$
+		\end{block}
+	\end{frame}
+\end{document}
