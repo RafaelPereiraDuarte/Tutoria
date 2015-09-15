@@ -1,0 +1,84 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{proof}
+\usepackage[scaled]{helvet}
+\renewcommand\familydefault{\sfdefault} 
+\usepackage[T1]{fontenc}
+\usepackage{color}
+\usetheme{berkeley}
+
+\title{Tutoria de Matem\'atica Discreta}
+\subtitle{}
+\author[R. P. Duarte]{Rafael Pereira Duarte}
+\institute[UFOP]{
+  Departamento de Computa\c{c}\~ao e Sistemas\\
+  Universidade de Federal de Ouro Preto
+}
+\date{\today}
+\begin{document}
+	\begin{frame}[plain]
+		\titlepage
+	\end{frame}
+	\begin{frame}{Exercício 3.3}
+		\begin{block}{1.} Considere como universo do discurso o conjunto de todos os seres humanos e que Holmes e Moriarty são constantes. Além disso, considere o predicado C(x,y) que denota "x pode capturar y". Com base no apresentado, represente as seguintes sentenças como fórmulas da lógica de predicados
+		\end{block}
+	\end{frame}
+	\begin{frame}{}
+		\begin{block}{A)}
+			Holmes pode capturar qualquer um que pode capturar Moriarty.
+		\end{block}
+	\end{frame}
+	\begin{frame}{}
+		\begin{block}{A)}
+			Holmes pode capturar qualquer um que pode capturar Moriarty.\newline
+			$\forall x.C(x,Moriarty)\rightarrow C(Holmes,x)$
+		\end{block}
+	\end{frame}
+	\begin{frame}{}
+		\begin{block}{B)}
+			Holmes pode capturar alguém que Moriarty pode capturar.
+		\end{block}
+	\end{frame}
+	\begin{frame}{}
+		\begin{block}{B)}
+			Holmes pode capturar alguém que Moriarty pode capturar.\newline
+			$\exists x.C(Moriarty,x)\rightarrow C(Holmes,x)$
+		\end{block}
+	\end{frame}
+	\begin{frame}{}
+		\begin{block}{C)}
+			Se alguém pode capturar Moriarty, então Holmes também pode.
+		\end{block}
+	\end{frame}
+	\begin{frame}{}
+		\begin{block}{C)}
+			Se alguém pode capturar Moriarty, então Holmes também pode.\newline
+			$\exists x.C(x,Moriarty)\rightarrow C(Holmes,Moriarty)$
+		\end{block}
+	\end{frame}
+	\begin{frame}{}
+		\begin{block}{D)}
+			Ninguém pode capturar Holmes, a menos que possa capturar Moriarty. 
+		\end{block}
+	\end{frame}
+	\begin{frame}{}
+		\begin{block}{D)}
+			Ninguém pode capturar Holmes, a menos que possa capturar Moriarty.\newline
+			$\lnot(\exists x.C(x,Moriarty)\rightarrow C(x,Holmes))$ 
+		\end{block}
+	\end{frame}
+	\begin{frame}{}
+		\begin{block}{E)}
+			Qualquer um que pode capturar Holmes pode capturar todos que Holmes pode capturar
+		\end{block}
+	\end{frame}
+	\begin{frame}{}
+		\begin{block}{E)}
+			Qualquer um que pode capturar Holmes pode capturar todos que Holmes pode capturar\newline
+			$\forall x.\exists y.C(Holmes, x)\rightarrow(C(y,x)\rightarrow C(y,Holmes))$
+		\end{block}
+	\end{frame}
+\end{document}
