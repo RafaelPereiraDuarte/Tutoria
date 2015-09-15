@@ -1,0 +1,45 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{proof}
+\usepackage[scaled]{helvet}
+\renewcommand\familydefault{\sfdefault} 
+\usepackage[T1]{fontenc}
+\usepackage{color}
+\usetheme{berkeley}
+
+\title{Tutoria de Matem\'atica Discreta}
+\subtitle{}
+\author[R. P. Duarte]{Rafael Pereira Duarte}
+\institute[UFOP]{
+  Departamento de Computa\c{c}\~ao e Sistemas\\
+  Universidade de Federal de Ouro Preto
+}
+\date{\today}
+\begin{document}
+	\begin{frame}[plain]
+		\titlepage
+	\end{frame}
+	\begin{frame}
+		\begin{block}{Exercício 3.5}
+			1. Apresente a definição recursiva para uma função que calcula o conjunto de variáveis ligadas de uma fórmula da lógica de predicados
+		\end{block}
+	\end{frame}
+	\begin{frame}
+		\begin{block}{Exercício 3.5}
+			\[fv(\alpha) = \begin{cases}
+			 fv(\beta) & \mbox{se} \,\,\alpha=\lnot\beta\\
+			fv(\beta)\cup fv(\gamma) & \mbox{se}\,\,\alpha =\beta\circ\gamma ,\circ\in\{\lor ,\land ,\rightarrow ,\leftrightarrow\}\\
+			fv(\beta)\cup {x} & \mbox{se}\,\alpha=\forall x.\beta \,\mbox{ou}\,\alpha=\exists x.\beta, \mbox{e} \,\beta=\forall x. \delta \, \\
+			 &\mbox{ou} \,\beta=\exists x.\delta\\
+			\{x\} & \forall x.\beta \mbox{ou} \alpha = \exists x.\beta\\
+			\emptyset & \mbox{se}\, \alpha = \top \,\mbox{ou}\, \bot\\
+			\emptyset & \mbox{se} \,\alpha\, \mbox{é uma variável}\\
+			\emptyset & \mbox{se} \,\alpha\, \mbox{é uma constante}
+			\end{cases}
+			\]
+		\end{block}
+	\end{frame}
+\end{document}
