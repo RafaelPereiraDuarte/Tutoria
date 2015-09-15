@@ -1,0 +1,569 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{proof}
+\usepackage{color}
+\usepackage[scaled]{helvet}
+\renewcommand\familydefault{\sfdefault} 
+\usepackage[T1]{fontenc}
+
+\title{Tutoria de Matem\'atica Discreta}
+\subtitle{}
+\author[R.P. Duarte]{Rafael Pereira Duarte}
+\institute[UFOP]{
+  Departamento de Computa\c{c}\~ao e Sistemas\\
+  Universidade de Federal de Ouro Preto
+}
+\date{\today}
+\begin{document}
+	\begin{frame}[plain]
+		\titlepage
+	\end{frame}
+	\begin{frame}{Exercício 3.9}
+		\begin{block}{1. Prove os seguintes sequentes usando dedução natural} 
+		\end{block}
+	\end{frame}
+	\begin{frame}{}
+		\begin{block}{}
+			\begin{itemize}
+				\item \textbf{A} $\{\forall x.(P(x)\rightarrow Q(x))\}\vdash(\forall x.\lnot Q(x))\rightarrow(\forall x.\lnot P(x))$
+				\item[\ ]{Hipóteses adicionais}
+                                  \[
+	 			\infer[_{(\rightarrow_{I})^1}]{(\forall x.\lnot Q(x))\rightarrow(\forall x.\lnot P(x))}{\forall x.\lnot P(x)}
+				\]
+
+
+			\end{itemize}
+		\end{block}
+	\end{frame}
+	\begin{frame}{}
+		\begin{block}{}
+			\begin{itemize}
+				\item \textbf{A} $\{\forall x.(P(x)\rightarrow Q(x))\}\vdash(\forall x.\lnot Q(x))\rightarrow(\forall x.\lnot P(x))$
+				\item[\ ]{Hipóteses adicionais$\{\forall x.\lnot Q(x)\}$}
+                                  \[
+	 			\infer[_{(\rightarrow_{I})^1}]{(\forall x.\lnot Q(x))\rightarrow(\forall x.\lnot P(x))}{\forall x.\lnot P(x)}
+				\]
+
+
+			\end{itemize}
+		\end{block}
+	\end{frame}
+	\begin{frame}{}
+		\begin{block}{}
+			\begin{itemize}
+				\item \textbf{A} $\{\forall x.(P(x)\rightarrow Q(x))\}\vdash(\forall x.\lnot Q(x))\rightarrow(\forall x.\lnot P(x))$
+				\item[\ ]{Hipóteses adicionais$\{\forall x.\lnot Q(x)\}$}
+                                  \[
+	 			\infer[_{(\rightarrow_{I})^1}]{(\forall x.\lnot Q(x))\rightarrow(\forall x.\lnot P(x))}{
+					\infer[_{(\forall_{I})}]{\forall  x.\lnot P(x)}{\lnot P(a)}
+				}
+				\]
+
+
+			\end{itemize}
+		\end{block}
+	\end{frame}
+	\begin{frame}{}
+		\begin{block}{}
+			\begin{itemize}
+				\item \textbf{A} $\{\forall x.(P(x)\rightarrow Q(x))\}\vdash(\forall x.\lnot Q(x))\rightarrow(\forall x.\lnot P(x))$
+				\item[\ ]{Hipóteses adicionais$\{\forall x.\lnot Q(x)\}$}
+                                  \[
+	 			\infer[_{(\rightarrow_{I})^1}]{(\forall x.\lnot Q(x))\rightarrow(\forall x.\lnot P(x))}{
+					\infer[_{(\forall_{I})}]{\forall  x.\lnot P(x)}{
+						\infer[_{(\rightarrow_{I})^2}]{\lnot P(a)}{\bot}
+					}
+				}
+				\]
+
+
+			\end{itemize}
+		\end{block}
+	\end{frame}
+	\begin{frame}{}
+		\begin{block}{}
+			\begin{itemize}
+				\item \textbf{A} $\{\forall x.(P(x)\rightarrow Q(x))\}\vdash(\forall x.\lnot Q(x))\rightarrow(\forall x.\lnot P(x))$
+				\item[\ ]{Hipóteses adicionais$\{\forall x.\lnot Q(x)\,,P(a)\}$}
+                                  \[
+	 			\infer[_{(\rightarrow_{I})^1}]{(\forall x.\lnot Q(x))\rightarrow(\forall x.\lnot P(x))}{
+					\infer[_{(\forall_{I})}]{\forall  x.\lnot P(x)}{
+						\infer[_{(\rightarrow_{I})^2}]{\lnot P(a)}{
+							\infer[_{(\rightarrow_{E})}]{\bot}{\lnot Q(a)&Q(a)}
+						}
+					}
+				}
+				\]
+
+
+			\end{itemize}
+		\end{block}
+	\end{frame}
+	\begin{frame}{}
+		\begin{block}{}
+			\begin{itemize}
+				\item \textbf{A} $\{\forall x.(P(x)\rightarrow Q(x))\}\vdash(\forall x.\lnot Q(x))\rightarrow(\forall x.\lnot P(x))$
+				\item[\ ]{Hipóteses adicionais$\{\forall x.\lnot Q(x)\,,P(a)\}$}
+                                  \[
+	 			\infer[_{(\rightarrow_{I})^1}]{(\forall x.\lnot Q(x))\rightarrow(\forall x.\lnot P(x))}{
+					\infer[_{(\forall_{I})}]{\forall  x.\lnot P(x)}{
+						\infer[_{(\rightarrow_{I})^2}]{\lnot P(a)}{
+							\infer[_{(\rightarrow_{E})}]{\bot}{\infer[_{(\forall_{E})}]{\lnot Q(a)}{\forall x.\lnot Q(x)}&Q(a)}
+						}
+					}
+				}
+				\]
+
+
+			\end{itemize}
+		\end{block}
+	\end{frame}
+	\begin{frame}{}
+		\begin{block}{}
+			\begin{itemize}
+				\item \textbf{A} $\{\forall x.(P(x)\rightarrow Q(x))\}\vdash(\forall x.\lnot Q(x))\rightarrow(\forall x.\lnot P(x))$
+				\item[\ ]{Hipóteses adicionais$\{\forall x.\lnot Q(x)\,,P(a)\}$}
+                                  \[
+	 			\infer[_{(\rightarrow_{I})^1}]{(\forall x.\lnot Q(x))\rightarrow(\forall x.\lnot P(x))}{
+					\infer[_{(\forall_{I})}]{\forall  x.\lnot P(x)}{
+						\infer[_{(\rightarrow_{I})^2}]{\lnot P(a)}{
+							\infer[_{(\rightarrow_{E})}]{\bot}{\infer[_{(\forall_{E})}]{\lnot Q(a)}{\infer[_{(ID)^1}]{\forall x.\lnot Q(x)}{}}        &         Q(a)}
+						}
+					}
+				}
+				\]
+
+
+			\end{itemize}
+		\end{block}
+	\end{frame}
+	\begin{frame}{}
+		\begin{block}{}
+			\begin{itemize}
+				\item \textbf{A} $\{\forall x.(P(x)\rightarrow Q(x))\}\vdash(\forall x.\lnot Q(x))\rightarrow(\forall x.\lnot P(x))$
+				\item[\ ]{Hipóteses adicionais$\{\forall x.\lnot Q(x)\,,P(a)\}$}
+                                  \[
+	 			\infer[_{(\rightarrow_{I})^1}]{(\forall x.\lnot Q(x))\rightarrow(\forall x.\lnot P(x))}{
+					\infer[_{(\forall_{I})}]{\forall  x.\lnot P(x)}{
+						\infer[_{(\rightarrow_{I})^2}]{\lnot P(a)}{
+							\infer[_{(\rightarrow_{E})}]{\bot}{\infer[_{(\forall_{E})}]{\lnot Q(a)}{\infer[_{(ID)^1}]{\forall x.\lnot Q(x)}{}}        &         \infer[_{(\rightarrow_{E})}]{Q(a)}{P(a)\rightarrow Q(a)&&P(a)}  }
+						}
+					}
+				}
+				\]
+
+
+			\end{itemize}
+		\end{block}
+	\end{frame}
+	\begin{frame}{}
+		\begin{block}{}
+			\begin{itemize}
+				\item \textbf{A} $\{\forall x.(P(x)\rightarrow Q(x))\}\vdash(\forall x.\lnot Q(x))\rightarrow(\forall x.\lnot P(x))$
+				\item[\ ]{Hipóteses adicionais$\{\forall x.\lnot Q(x)\,,P(a)\}$}
+                                  \[
+	 			\infer[_{(\rightarrow_{I})^1}]{(\forall x.\lnot Q(x))\rightarrow(\forall x.\lnot P(x))}{
+					\infer[_{(\forall_{I})}]{\forall  x.\lnot P(x)}{
+						\infer[_{(\rightarrow_{I})^2}]{\lnot P(a)}{
+							\infer[_{(\rightarrow_{E})}]{\bot}{\infer[_{(\forall_{E})}]{\lnot Q(a)}{\infer[_{(ID)^1}]{\forall x.\lnot Q(x)}{}}        &         \infer[_{(\rightarrow_{E})}]{Q(a)}{P(a)\rightarrow Q(a)&& \infer[_{(ID)^2}]{P(a)}{} }  }
+						}
+					}
+				}
+				\]
+
+
+			\end{itemize}
+		\end{block}
+	\end{frame}
+	\begin{frame}{}
+		\begin{block}{}
+			\begin{itemize}
+				\item \textbf{A} $\{\forall x.(P(x)\rightarrow Q(x))\}\vdash(\forall x.\lnot Q(x))\rightarrow(\forall x.\lnot P(x))$
+				\item[\ ]{Hipóteses adicionais$\{\forall x.\lnot Q(x)\,,P(a)\}$}
+                                  \[
+	 			\infer[_{(\rightarrow_{I})^1}]{(\forall x.\lnot Q(x))\rightarrow(\forall x.\lnot P(x))}{
+					\infer[_{(\forall_{I})}]{\forall  x.\lnot P(x)}{
+						\infer[_{(\rightarrow_{I})^2}]{\lnot P(a)}{
+							\infer[_{(\rightarrow_{E})}]{\bot}{\infer[_{(\forall_{E})}]{\lnot Q(a)}{\infer[_{(ID)^1}]{\forall x.\lnot Q(x)}{}}        &         \infer[_{(\rightarrow_{E})}]{Q(a)}{\infer[_{(\forall_{E})}]{P(a)\rightarrow Q(a)}{\forall x.(P(x)\rightarrow Q(x))}      &&     \infer[_{(ID)^2}]{P(a)}{} }  }
+						}
+					}
+				}
+				\]
+
+
+			\end{itemize}
+		\end{block}
+	\end{frame}
+	\begin{frame}{}
+		\begin{block}{}
+			\begin{itemize}
+				\item \textbf{A} $\{\forall x.(P(x)\rightarrow Q(x))\}\vdash(\forall x.\lnot Q(x))\rightarrow(\forall x.\lnot P(x))$
+				\item[\ ]{Hipóteses adicionais$\{\forall x.\lnot Q(x)\,,P(a)\}$}
+                                  \[
+	 			\infer[_{(\rightarrow_{I})^1}]{(\forall x.\lnot Q(x))\rightarrow(\forall x.\lnot P(x))}{
+					\infer[_{(\forall_{I})}]{\forall  x.\lnot P(x)}{
+						\infer[_{(\rightarrow_{I})^2}]{\lnot P(a)}{
+							\infer[_{(\rightarrow_{E})}]{\bot}{\infer[_{(\forall_{E})}]{\lnot Q(a)}{\infer[_{(ID)^1}]{\forall x.\lnot Q(x)}{}}        &         \infer[_{(\rightarrow_{E})}]{Q(a)}{\infer[_{(\forall_{E})}]{P(a)\rightarrow Q(a)}{\infer[_{(ID)}]{\forall x.(P(x)\rightarrow Q(x))}{}}      &&     \infer[_{(ID)^2}]{P(a)}{} }  }
+						}
+					}
+				}
+				\]
+
+
+			\end{itemize}
+		\end{block}
+	\end{frame}
+	\begin{frame}{}
+		\begin{block}{}
+			\begin{itemize}
+				\item \textbf{C} $\{\forall x.(A(x)\rightarrow(B(x)\lor C(x))),\, \forall x.\lnot B(x)\}\vdash\newline(\forall x.A(x))\rightarrow(\forall x.C(x))$
+				\item[\ ]{Hipóteses adicionais}
+                                  \[
+				\]
+
+
+			\end{itemize}
+		\end{block}
+	\end{frame}
+	\begin{frame}{}
+		\begin{block}{}
+			\begin{itemize}
+				\item \textbf{C} $\{\forall x.(A(x)\rightarrow(B(x)\lor C(x))),\, \forall x.\lnot B(x)\}\vdash\newline(\forall x.A(x))\rightarrow(\forall x.C(x))$
+				\item[\ ]{Hipóteses adicionais$\{\forall x.A(x)\}$}
+                                  \[
+				\infer[_{(\rightarrow_{I})^1}]{(\forall x.A(x))\rightarrow(\forall x.C(x))}{\forall x.C(x)}
+				\]
+
+
+			\end{itemize}
+		\end{block}
+	\end{frame}
+	\begin{frame}{}
+		\begin{block}{}
+			\begin{itemize}
+				\item \textbf{C} $\{\forall x.(A(x)\rightarrow(B(x)\lor C(x))),\, \forall x.\lnot B(x)\}\vdash\newline(\forall x.A(x))\rightarrow(\forall x.C(x))$
+				\item[\ ]{Hipóteses adicionais$\{\forall x.A(x)\}$}
+                                  \[
+				\infer[_{(\rightarrow_{I})^1}]{(\forall x.A(x))\rightarrow(\forall x.C(x))}{\infer[_{(\forall_{I})}]{\forall x.C(x)}  {C(a)}    }
+				\]
+
+
+			\end{itemize}
+		\end{block}
+	\end{frame}
+	\begin{frame}{}
+		\begin{block}{}
+			\begin{itemize}
+				\item \textbf{C} $\{\forall x.(A(x)\rightarrow(B(x)\lor C(x))),\, \forall x.\lnot B(x)\}\vdash\newline(\forall x.A(x))\rightarrow(\forall x.C(x))$
+				\item[\ ]{Hipóteses adicionais$\{\forall x.A(x)\}$}
+                                  \[
+				\infer[_{(\rightarrow_{I})^1}]{(\forall x.A(x))\rightarrow(\forall x.C(x))}{\infer[_{(\forall_{I})}]{\forall x.C(x)}    {\infer[_{(\lor_{E})}]{C(a)}{B(a)^2\lor C(a)^3&&&C(a)&&&C(a)}   }    }
+				\]
+
+
+			\end{itemize}
+		\end{block}
+	\end{frame}
+	\begin{frame}{}
+		\begin{block}{}
+			\begin{itemize}
+				\item \textbf{C} $\{\forall x.(A(x)\rightarrow(B(x)\lor C(x))),\, \forall x.\lnot B(x)\}\vdash\newline(\forall x.A(x))\rightarrow(\forall x.C(x))$
+				\item[\ ]{Hipóteses adicionais$\{\forall x.A(x)\}$}
+                                  \[
+				\infer[_{(\rightarrow_{I})^1}]{(\forall x.A(x))\rightarrow(\forall x.C(x))}{\infer[_{(\forall_{I})}]{\forall x.C(x)}    {\infer[_{(\lor_{E})}]{C(a)}{B(a)^2\lor C(a)^3    &&&   \infer[_{(ID)^3}]{C(a)}{}   &&&  C(a)}   }    }
+				\]
+
+
+			\end{itemize}
+		\end{block}
+	\end{frame}
+	\begin{frame}{}
+		\begin{block}{}
+			\begin{itemize}
+				\item \textbf{C} $\{\forall x.(A(x)\rightarrow(B(x)\lor C(x))),\, \forall x.\lnot B(x)\}\vdash\newline(\forall x.A(x))\rightarrow(\forall x.C(x))$
+				\item[\ ]{Hipóteses adicionais$\{\forall x.A(x)\}$}
+                                  \[
+				\infer[_{(\rightarrow_{I})^1}]{(\forall x.A(x))\rightarrow(\forall x.C(x))}{\infer[_{(\forall_{I})}]{\forall x.C(x)}    {\infer[_{(\lor_{E})}]{C(a)}{B(a)^2\lor C(a)^3    &&&   \infer[_{(ID)^3}]{C(a)}{}   &&&   \infer[_{(CTR)}]{C(a)}{\bot}    }   }    }
+				\]
+
+
+			\end{itemize}
+		\end{block}
+	\end{frame}
+	\begin{frame}{}
+		\begin{block}{}
+			\begin{itemize}
+				\item \textbf{C} $\{\forall x.(A(x)\rightarrow(B(x)\lor C(x))),\, \forall x.\lnot B(x)\}\vdash\newline(\forall x.A(x))\rightarrow(\forall x.C(x))$
+				\item[\ ]{Hipóteses adicionais$\{\forall x.A(x)\}$}
+                                  \[
+				\infer[_{(\rightarrow_{I})^1}]{(\forall x.A(x))\rightarrow(\forall x.C(x))}{\infer[_{(\forall_{I})}]{\forall x.C(x)}    {\infer[_{(\lor_{E})}]{C(a)}{B(a)^2\lor C(a)^3    &&&   \infer[_{(ID)^3}]{C(a)}{}   &&&   \infer[_{(CTR)}]{C(a)}{  \infer[_{(\rightarrow_{E})}]{\bot}{\lnot B(a)&&B(a)}  }    }   }    }
+				\]
+
+
+			\end{itemize}
+		\end{block}
+	\end{frame}
+	\begin{frame}{}
+		\begin{block}{}
+			\begin{itemize}
+				\item \textbf{C} $\{\forall x.(A(x)\rightarrow(B(x)\lor C(x))),\, \forall x.\lnot B(x)\}\vdash\newline(\forall x.A(x))\rightarrow(\forall x.C(x))$
+				\item[\ ]{Hipóteses adicionais$\{\forall x.A(x)\}$}
+                                  \[
+				\infer[_{(\rightarrow_{I})^1}]{(\forall x.A(x))\rightarrow(\forall x.C(x))}{\infer[_{(\forall_{I})}]{\forall x.C(x)}    {\infer[_{(\lor_{E})}]{C(a)}{B(a)^2\lor C(a)^3    &&&   \infer[_{(ID)^3}]{C(a)}{}   &&&   \infer[_{(CTR)}]{C(a)}{  \infer[_{(\rightarrow_{E})}]{\bot}{\lnot B(a)&& \infer[_{(ID)^2}]{B(a)}{}}  }    }   }    }
+				\]
+
+
+			\end{itemize}
+		\end{block}
+	\end{frame}
+	\begin{frame}{}
+		\begin{block}{}
+			\begin{itemize}
+				\item \textbf{C} $\{\forall x.(A(x)\rightarrow(B(x)\lor C(x))),\, \forall x.\lnot B(x)\}\vdash\newline(\forall x.A(x))\rightarrow(\forall x.C(x))$
+				\item[\ ]{Hipóteses adicionais$\{\forall x.A(x)\}$}
+                                  \[
+				\infer[_{(\rightarrow_{I})^1}]{(\forall x.A(x))\rightarrow(\forall x.C(x))}{\infer[_{(\forall_{I})}]{\forall x.C(x)}    {\infer[_{(\lor_{E})}]{C(a)}{B(a)^2\lor C(a)^3    &&&   \infer[_{(ID)^3}]{C(a)}{}   &&&   \infer[_{(CTR)}]{C(a)}{  \infer[_{(\rightarrow_{E})}]{\bot}{   \infer[_{(\forall_{E})}]{\lnot B(a)}{\forall x.\lnot B(x)}  && \infer[_{(ID)^2}]{B(a)}{}}  }    }   }    }
+				\]
+
+
+			\end{itemize}
+		\end{block}
+	\end{frame}
+	\begin{frame}{}
+		\begin{block}{}
+			\begin{itemize}
+				\item \textbf{C} $\{\forall x.(A(x)\rightarrow(B(x)\lor C(x))),\, \forall x.\lnot B(x)\}\vdash\newline(\forall x.A(x))\rightarrow(\forall x.C(x))$
+				\item[\ ]{Hipóteses adicionais$\{\forall x.A(x)\}$}
+                                  \[
+				\infer[_{(\rightarrow_{I})^1}]{(\forall x.A(x))\rightarrow(\forall x.C(x))}{\infer[_{(\forall_{I})}]{\forall x.C(x)}    {\infer[_{(\lor_{E})}]{C(a)}{B(a)^2\lor C(a)^3    &&&   \infer[_{(ID)^3}]{C(a)}{}   &&&   \infer[_{(CTR)}]{C(a)}{  \infer[_{(\rightarrow_{E})}]{\bot}{   \infer[_{(\forall_{E})}]{\lnot B(a)}{\infer[_{(ID)}]{\forall x.\lnot B(x)}{}}  && \infer[_{(ID)^2}]{B(a)}{}}  }    }   }    }
+				\]
+
+
+			\end{itemize}
+		\end{block}
+	\end{frame}
+	\begin{frame}{}
+		\begin{block}{}
+			\begin{itemize}
+				\item \textbf{C} $\{\forall x.(A(x)\rightarrow(B(x)\lor C(x))),\, \forall x.\lnot B(x)\}\vdash\newline(\forall x.A(x))\rightarrow(\forall x.C(x))$
+				\item[\ ]{Hipóteses adicionais$\{\forall x.A(x)\}$}
+                                  \[
+				\infer[_{(\rightarrow_{I})^1}]{(\forall x.A(x))\rightarrow(\forall x.C(x))}{\infer[_{(\forall_{I})}]{\forall x.C(x)}    {\infer[_{(\lor_{E})}]{C(a)}{\infer[_{(\rightarrow_{E})}]{B(a)^2\lor C(a)^3 }{A(a)\rightarrow(B(a)\lor C(a))  &   A(a)}   & \infer[_{(ID)^3}]{C(a)}{}    \infer[_{(CTR)}]{C(a)}{  \infer[_{(\rightarrow_{E})}]{\bot}{   \infer[_{(\forall_{E})}]{\lnot B(a)}{\infer[_{(ID)}]{\forall x.\lnot B(x)}{}}  & \infer[_{(ID)^2}]{B(a)}{}}  }    }   }    }
+				\]
+
+
+			\end{itemize}
+		\end{block}
+	\end{frame}
+	\begin{frame}{}
+		\begin{block}{}
+			\begin{itemize}
+				\item \textbf{C} $\{\forall x.(A(x)\rightarrow(B(x)\lor C(x))),\, \forall x.\lnot B(x)\}\vdash\newline(\forall x.A(x))\rightarrow(\forall x.C(x))$
+				\item[\ ]{Hipóteses adicionais$\{\forall x.A(x)\}$}
+                                  \[
+				\infer[_{(\rightarrow_{I})^1}]{(\forall x.A(x))\rightarrow(\forall x.C(x))}{\infer[_{(\forall_{I})}]{\forall x.C(x)}    {\infer[_{(\lor_{E})}]{C(a)}{\infer[_{(\rightarrow_{E})}]{B(a)^2\lor C(a)^3 }{A(a)\rightarrow(B(a)\lor C(a))  &   \infer[_{(\forall_{E})}]{A(a)}{\forall x.A(x)}}   & \infer[_{(ID)^3}]{C(a)}{}    \infer[_{(CTR)}]{C(a)}{  \infer[_{(\rightarrow_{E})}]{\bot}{   \infer[_{(\forall_{E})}]{\lnot B(a)}{\infer[_{(ID)}]{\forall x.\lnot B(x)}{}}  & \infer[_{(ID)^2}]{B(a)}{}}  }    }   }    }
+				\]
+
+
+			\end{itemize}
+		\end{block}
+	\end{frame}
+	\begin{frame}{}
+		\begin{block}{}
+			\begin{itemize}
+				\item \textbf{C} $\{\forall x.(A(x)\rightarrow(B(x)\lor C(x))),\, \forall x.\lnot B(x)\}\vdash\newline(\forall x.A(x))\rightarrow(\forall x.C(x))$
+				\item[\ ]{Hipóteses adicionais$\{\forall x.A(x)\}$}
+                                  \[
+				\infer[_{(\rightarrow_{I})^1}]{(\forall x.A(x))\rightarrow(\forall x.C(x))}{\infer[_{(\forall_{I})}]{\forall x.C(x)}    {\infer[_{(\lor_{E})}]{C(a)}{\infer[_{(\rightarrow_{E})}]{B(a)^2\lor C(a)^3 }{A(a)\rightarrow(B(a)\lor C(a))  &   \infer[_{(\forall_{E})}]{A(a)}{\infer[_{(ID)^1}]{\forall x.A(x)}{}}}   & \infer[_{(ID)^3}]{C(a)}{}    \infer[_{(CTR)}]{C(a)}{  \infer[_{(\rightarrow_{E})}]{\bot}{   \infer[_{(\forall_{E})}]{\lnot B(a)}{\infer[_{(ID)}]{\forall x.\lnot B(x)}{}}  & \infer[_{(ID)^2}]{B(a)}{}}  }    }   }    }
+				\]
+
+
+			\end{itemize}
+		\end{block}
+	\end{frame}
+	\begin{frame}{}
+		\begin{block}{}
+			\begin{itemize}
+				\item \textbf{C} $\{\forall x.(A(x)\rightarrow(B(x)\lor C(x))),\, \forall x.\lnot B(x)\}\vdash\newline(\forall x.A(x))\rightarrow(\forall x.C(x))$
+				\item[\ ]{Hipóteses adicionais$\{\forall x.A(x)\}$}
+                                  \[
+				\infer[_{(\rightarrow_{I})^1}]{(\forall x.A(x))\rightarrow(\forall x.C(x))}{\infer[_{(\forall_{I})}]{\forall x.C(x)}    {\infer[_{(\lor_{E})}]{C(a)}{\infer[_{(\rightarrow_{E})}]{B(a)^2\lor C(a)^3 }{\infer[_{(\forall_{E})}]{A(a)\rightarrow(B(a)\lor C(a))}{\forall x.A(x)\rightarrow(B(x)\lor C(x))}  &   \infer[_{(\forall_{E})}]{A(a)}{\infer[_{(ID)^1}]{\forall x.A(x)}{}}}   & \infer[_{(ID)^3}]{C(a)}{}    \infer[_{(CTR)}]{C(a)}{  \infer[_{(\rightarrow_{E})}]{\bot}{   \infer[_{(\forall_{E})}]{\lnot B(a)}{\infer[_{(ID)}]{\forall x.\lnot B(x)}{}}  & \infer[_{(ID)^2}]{B(a)}{}}  }    }   }    }
+				\]
+
+
+			\end{itemize}
+		\end{block}
+	\end{frame}
+	\begin{frame}{}
+		\begin{block}{}
+			\begin{itemize}
+				\item \textbf{C} $\{\forall x.(A(x)\rightarrow(B(x)\lor C(x))),\, \forall x.\lnot B(x)\}\vdash\newline(\forall x.A(x))\rightarrow(\forall x.C(x))$
+				\item[\ ]{Hipóteses adicionais$\{\forall x.A(x)\}$}
+                                  \[
+				\infer[_{(\rightarrow_{I})^1}]{(\forall x.A(x))\rightarrow(\forall x.C(x))}{\infer[_{(\forall_{I})}]{\forall x.C(x)}    {\infer[_{(\lor_{E})}]{C(a)}{\infer[_{(\rightarrow_{E})}]{B(a)^2\lor C(a)^3 }{\infer[_{(\forall_{E})}]{A(a)\rightarrow(B(a)\lor C(a))}{\infer[_{(ID)}]{\forall x.A(x)\rightarrow(B(x)\lor C(x))}{}}  &   \infer[_{(\forall_{E})}]{A(a)}{\infer[_{(ID)^1}]{\forall x.A(x)}{}}}   & \infer[_{(ID)^3}]{C(a)}{}    \infer[_{(CTR)}]{C(a)}{  \infer[_{(\rightarrow_{E})}]{\bot}{   \infer[_{(\forall_{E})}]{\lnot B(a)}{\infer[_{(ID)}]{\forall x.\lnot B(x)}{}}  & \infer[_{(ID)^2}]{B(a)}{}}  }    }   }    }
+				\]
+
+
+			\end{itemize}
+		\end{block}
+	\end{frame}
+	\begin{frame}{}
+		\begin{block}{}
+			\begin{itemize}
+				\item \textbf{E} $\{\forall x.P(a,x,x),\,\forall x.\forall y.\forall z.P(x,y,z)\rightarrow P(f(x),y,f(z))\}\vdash P(f(a),a,f(a))$
+				\item[\ ]{Hipóteses adicionais}
+                                  \[
+				\infer[_{(\rightarrow_{E})}]{P(f(a),a,P(a))}{P(a,a,a)\rightarrow P(f(a),a,f(a))  &  P(a,a,a)}
+				\]
+
+
+			\end{itemize}
+		\end{block}
+	\end{frame}
+	\begin{frame}{}
+		\begin{block}{}
+			\begin{itemize}
+				\item \textbf{E} $\{\forall x.P(a,x,x),\,\forall x.\forall y.\forall z.P(x,y,z)\rightarrow P(f(x),y,f(z))\}\vdash P(f(a),a,f(a))$
+				\item[\ ]{Hipóteses adicionais}
+                                  \[
+				\infer[_{(\rightarrow_{E})}]{P(f(a),a,P(a))}{P(a,a,a)\rightarrow P(f(a),a,f(a))  &  \infer[_{(\forall_{E})}]{P(a,a,a)}{\forall x.P(a,x,x)}}
+				\]
+
+
+			\end{itemize}
+		\end{block}
+	\end{frame}
+	\begin{frame}{}
+		\begin{block}{}
+			\begin{itemize}
+				\item \textbf{E} $\{\forall x.P(a,x,x),\,\forall x.\forall y.\forall z.P(x,y,z)\rightarrow P(f(x),y,f(z))\}\vdash P(f(a),a,f(a))$
+				\item[\ ]{Hipóteses adicionais}
+                                  \[
+				\infer[_{(\rightarrow_{E})}]{P(f(a),a,P(a))}{P(a,a,a)\rightarrow P(f(a),a,f(a))  &  \infer[_{(\forall_{E})}]{P(a,a,a)}{\infer[_{(ID)}]{\forall x.P(a,x,x)}{}}}
+				\]
+
+
+			\end{itemize}
+		\end{block}
+	\end{frame}
+	\begin{frame}{}
+		\begin{block}{}
+			\begin{itemize}
+				\item \textbf{E} $\{\forall x.P(a,x,x),\,\forall x.\forall y.\forall z.P(x,y,z)\rightarrow P(f(x),y,f(z))\}\vdash P(f(a),a,f(a))$
+				\item[\ ]{Hipóteses adicionais}
+                                  \[
+				\infer[_{(\rightarrow_{E})}]{P(f(a),a,P(a))}{\infer[_{(\forall_{E})}]{P(a,a,a)\rightarrow P(f(a),a,f(a))}{\forall x.\forall y.\forall z.P(x,y,z)\rightarrow P(f(x),y,f(z))} &  \infer[_{(\forall_{E})}]{P(a,a,a)}{\infer[_{(ID)}]{\forall x.P(a,x,x)}{}}}
+				\]
+
+
+			\end{itemize}
+		\end{block}
+	\end{frame}
+	\begin{frame}{}
+		\begin{block}{}
+			\begin{itemize}
+				\item \textbf{E} $\{\forall x.P(a,x,x),\,\forall x.\forall y.\forall z.P(x,y,z)\rightarrow P(f(x),y,f(z))\}\vdash P(f(a),a,f(a))$
+				\item[\ ]{Hipóteses adicionais}
+                                  \[
+				\infer[_{(\rightarrow_{E})}]{P(f(a),a,P(a))}{\infer[_{(\forall_{E})}]{P(a,a,a)\rightarrow P(f(a),a,f(a))}{\infer[_{(ID)}]{\forall x.\forall y.\forall z.P(x,y,z)\rightarrow P(f(x),y,f(z))}{}} &  \infer[_{(\forall_{E})}]{P(a,a,a)}{\infer[_{(ID)}]{\forall x.P(a,x,x)}{}}}
+				\]
+
+
+			\end{itemize}
+		\end{block}
+	\end{frame}
+	\begin{frame}{}
+		\begin{block}{}
+			\begin{itemize}
+				\item \textbf{G} $\{\exists x.\lnot P(x)\}\vdash\lnot\forall x.P(x)$
+				\item[\ ]{Hipóteses adicionais$\{\forall x.P(x)\}$}
+                                  \[
+				\infer[_{(\rightarrow_{I})^1}]{\lnot\forall x.P(x)}{\bot}
+				\]
+
+
+			\end{itemize}
+		\end{block}
+	\end{frame}
+	\begin{frame}{}
+		\begin{block}{}
+			\begin{itemize}
+				\item \textbf{G} $\{\exists x.\lnot P(x)\}\vdash\lnot\forall x.P(x)$
+				\item[\ ]{Hipóteses adicionais$\{\forall x.P(x)\}$}
+                                  \[
+				\infer[_{(\rightarrow_{I})^1}]{\lnot\forall x.P(x)}{\infer[_{(\exists_{E})}]{\bot}{\exists x.\lnot P(x) &&& \bot}}
+				\]
+
+
+			\end{itemize}
+		\end{block}
+	\end{frame}
+	\begin{frame}{}
+		\begin{block}{}
+			\begin{itemize}
+				\item \textbf{G} $\{\exists x.\lnot P(x)\}\vdash\lnot\forall x.P(x)$
+				\item[\ ]{Hipóteses adicionais$\{\forall x.P(x)\}$}
+                                  \[
+				\infer[_{(\rightarrow_{I})^1}]{\lnot\forall x.P(x)}{\infer[_{(\exists_{E})}]{\bot}{\exists x.\lnot P(x) &&& \infer[_{(\rightarrow_{E})}]{\bot}{\lnot P(a) && P(a)}}}
+				\]
+
+
+			\end{itemize}
+		\end{block}
+	\end{frame}
+	\begin{frame}{}
+		\begin{block}{}
+			\begin{itemize}
+				\item \textbf{G} $\{\exists x.\lnot P(x)\}\vdash\lnot\forall x.P(x)$
+				\item[\ ]{Hipóteses adicionais$\{\forall x.P(x)\}$}
+                                  \[
+				\infer[_{(\rightarrow_{I})^1}]{\lnot\forall x.P(x)}{\infer[_{(\exists_{E})}]{\bot}{\exists x.\lnot P(x) &&& \infer[_{(\rightarrow_{E})}]{\bot}{\lnot P(a) && \infer[_{(\forall_{E})}]{P(a)}{\forall x.P(x)}}}}
+				\]
+
+
+			\end{itemize}
+		\end{block}
+	\end{frame}
+	\begin{frame}{}
+		\begin{block}{}
+			\begin{itemize}
+				\item \textbf{G} $\{\exists x.\lnot P(x)\}\vdash\lnot\forall x.P(x)$
+				\item[\ ]{Hipóteses adicionais$\{\forall x.P(x)\}$}
+                                  \[
+				\infer[_{(\rightarrow_{I})^1}]{\lnot\forall x.P(x)}{\infer[_{(\exists_{E})}]{\bot}{\exists x.\lnot P(x) &&& \infer[_{(\rightarrow_{E})}]{\bot}{\lnot P(a) && \infer[_{(\forall_{E})}]{P(a)}{\infer[_{(ID)^1}]{\forall x.P(x)}{}   }}}}
+				\]
+
+
+			\end{itemize}
+		\end{block}
+	\end{frame}
+	\begin{frame}{}
+		\begin{block}{}
+			\begin{itemize}
+				\item \textbf{G} $\{\exists x.\lnot P(x)\}\vdash\lnot\forall x.P(x)$
+				\item[\ ]{Hipóteses adicionais$\{\forall x.P(x)\}$}
+                                  \[
+				\infer[_{(\rightarrow_{I})^1}]{\lnot\forall x.P(x)}{\infer[_{(\exists_{E})}]{\bot}{\exists x.\lnot P(x) &&& \infer[_{(\rightarrow_{E})}]{\bot}{\infer[_{(ID)^2}]{\lnot P(a)}{} && \infer[_{(\forall_{E})}]{P(a)}{\infer[_{(ID)^1}]{\forall x.P(x)}{}   }}}}
+				\]
+
+
+			\end{itemize}
+		\end{block}
+	\end{frame}
+	\begin{frame}{}
+		\begin{block}{}
+			\begin{itemize}
+				\item \textbf{G} $\{\exists x.\lnot P(x)\}\vdash\lnot\forall x.P(x)$
+				\item[\ ]{Hipóteses adicionais$\{\forall x.P(x)\}$}
+                                  \[
+				\infer[_{(\rightarrow_{I})^1}]{\lnot\forall x.P(x)}{\infer[_{(\exists_{E})}]{\bot}{\infer[_{(ID)}]{\exists x.\lnot P(x)}{} &&& \infer[_{(\rightarrow_{E})}]{\bot}{\infer[_{(ID)^2}]{\lnot P(a)}{} && \infer[_{(\forall_{E})}]{P(a)}{\infer[_{(ID)^1}]{\forall x.P(x)}{}   }}}}
+				\]
+
+
+			\end{itemize}
+		\end{block}
+	\end{frame}
+\end{document}
