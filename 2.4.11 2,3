@@ -1,0 +1,581 @@
+\documentclass{Beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usetheme{shadow}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\title{Tutoria de Matematica Discreta}
+\author{Rafael Pereira Duarte}
+
+
+\begin{document}
+\section{Exercício 2.4.11}
+\title{Tutoria de Matemática Discreta}
+\subtitle{Coordenador Rodrigo Geraldo Ribeiro}
+\author[R.P.D.7]{Rafael Pereira Duarte}
+\institute[UFOP]{
+  Departamento de Computa\c{c}\~ao e Sistemas\\
+  Universidade de Federal de Ouro Preto
+}
+\begin{frame}[plain]
+		\titlepage
+	\end{frame}
+\frame{
+\frametitle{Exercícios seção 2.4.11}
+\begin{block}{2.}
+Construa tabelas verdade para as fórmulas a seguir e classifiques-as como sendo tautologias, contigências ou contradições
+\end{block}
+}
+\frame{
+\frametitle{A.$(A\rightarrow B)\leftrightarrow\lnot A\lor B$}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline 
+A & B & $\lnot A$ & $A \rightarrow B$ & $\lnot A\lor B$ & $(A\rightarrow B)\leftrightarrow\lnot A\lor B$\\
+\hline
+F&F&&&&\\
+\hline
+F&T&&&&\\
+\hline
+T&F&&&&\\
+\hline
+T&T&&&&\\
+\hline
+\end{tabular}
+\end{center}
+}
+\frame{
+\frametitle{A.$(A\rightarrow B)\leftrightarrow\lnot A\lor B$}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline 
+A & B & $\lnot A$ & $A \rightarrow B$ & $\lnot A\lor B$ & $(A\rightarrow B)\leftrightarrow\lnot A\lor B$\\
+\hline
+F&F&T&&&\\
+\hline
+F&T&T&&&\\
+\hline
+T&F&F&&&\\
+\hline
+T&T&F&&&\\
+\hline
+\end{tabular}
+\end{center}
+}
+\frame{
+\frametitle{A.$(A\rightarrow B)\leftrightarrow\lnot A\lor B$}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline 
+A & B & $\lnot A$ & $A \rightarrow B$ & $\lnot A\lor B$ & $(A\rightarrow B)\leftrightarrow\lnot A\lor B$\\
+\hline
+F&F&T&T&&\\
+\hline
+F&T&T&T&&\\
+\hline
+T&F&F&F&&\\
+\hline
+T&T&F&T&&\\
+\hline
+\end{tabular}
+\end{center}
+}
+\frame{
+\frametitle{A.$(A\rightarrow B)\leftrightarrow\lnot A\lor B$}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline 
+A & B & $\lnot A$ & $A \rightarrow B$ & $\lnot A\lor B$ & $(A\rightarrow B)\leftrightarrow\lnot A\lor B$\\
+\hline
+F&F&T&T&T&\\
+\hline
+F&T&T&T&T&\\
+\hline
+T&F&F&F&F&\\
+\hline
+T&T&F&T&T&\\
+\hline
+\end{tabular}
+\end{center}
+}
+\frame{
+\frametitle{A.$(A\rightarrow B)\leftrightarrow\lnot A\lor B$}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline 
+A & B & $\lnot A$ & $A \rightarrow B$ & $\lnot A\lor B$ & $(A\rightarrow B)\leftrightarrow\lnot A\lor B$\\
+\hline
+F&F&T&T&T&T\\
+\hline
+F&T&T&T&T&T\\
+\hline
+T&F&F&F&F&T\\
+\hline
+T&T&F&T&T&T\\
+\hline
+\end{tabular}
+\end{center}
+}
+\frame{
+\frametitle{B.$(A\land B)\lor C\rightarrow A\land(B\lor C)$}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+A&B&C&$A\land B$&$B\lor C$&$(A\land B)\lor C$&$A\land(B\lor C)$\\\hline
+F&F&F&&&&\\\hline
+F&F&T&&&&\\\hline
+F&T&F&&&&\\\hline
+F&T&T&&&&\\\hline
+T&F&F&&&&\\\hline
+T&F&T&&&&\\\hline
+T&T&F&&&&\\\hline
+T&T&T&&&&\\\hline
+\end{tabular}
+\end{center}
+}
+\frame{
+\frametitle{B.$(A\land B)\lor C\rightarrow A\land(B\lor C)$}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+A&B&C&$A\land B$&$B\lor C$&$(A\land B)\lor C$&$A\land(B\lor C)$\\\hline
+F&F&F&F&&&\\\hline
+F&F&T&F&&&\\\hline
+F&T&F&F&&&\\\hline
+F&T&T&F&&&\\\hline
+T&F&F&F&&&\\\hline
+T&F&T&F&&&\\\hline
+T&T&F&T&&&\\\hline
+T&T&T&T&&&\\\hline
+\end{tabular}
+\end{center}
+}
+\frame{
+\frametitle{B.$(A\land B)\lor C\rightarrow A\land(B\lor C)$}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+A&B&C&$A\land B$&$B\lor C$&$(A\land B)\lor C$&$A\land(B\lor C)$\\\hline
+F&F&F&F&F&&\\\hline
+F&F&T&F&T&&\\\hline
+F&T&F&F&T&&\\\hline
+F&T&T&F&T&&\\\hline
+T&F&F&F&F&&\\\hline
+T&F&T&F&T&&\\\hline
+T&T&F&T&T&&\\\hline
+T&T&T&T&T&&\\\hline
+\end{tabular}
+\end{center}
+}
+\frame{
+\frametitle{B.$(A\land B)\lor C\rightarrow A\land(B\lor C)$}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+A&B&C&$A\land B$&$B\lor C$&$(A\land B)\lor C$&$A\land(B\lor C)$\\\hline
+F&F&F&F&F&F&\\\hline
+F&F&T&F&T&T&\\\hline
+F&T&F&F&T&F&\\\hline
+F&T&T&F&T&T&\\\hline
+T&F&F&F&F&F&\\\hline
+T&F&T&F&T&T&\\\hline
+T&T&F&T&T&T&\\\hline
+T&T&T&T&T&T&\\\hline
+\end{tabular}
+\end{center}
+}
+\frame{
+\frametitle{B.$(A\land B)\lor C\rightarrow A\land(B\lor C)$}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+A&B&C&$A\land B$&$B\lor C$&$(A\land B)\lor C$&$A\land(B\lor C)$\\\hline
+F&F&F&F&F&F&F\\\hline
+F&F&T&F&T&T&F\\\hline
+F&T&F&F&T&F&F\\\hline
+F&T&T&F&T&T&F\\\hline
+T&F&F&F&F&F&F\\\hline
+T&F&T&F&T&T&T\\\hline
+T&T&F&T&T&T&T\\\hline
+T&T&T&T&T&T&T\\\hline
+\end{tabular}
+\end{center}
+}
+\frame{
+\frametitle{B.$(A\land B)\lor C\rightarrow A\land(B\lor C)$}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+$(A\land B)\lor C\rightarrow A\land(B\lor C)$\\\hline
+T\\\hline
+F\\\hline
+T\\\hline
+F\\\hline
+T\\\hline
+T\\\hline
+T\\\hline
+T\\\hline
+\end{tabular}
+\end{center}
+}
+\frame{
+\frametitle{C.$A\land\lnot(\lnot A\lor \lnot B)$}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+A&B&$\lnot A$&$\lnot B$&$\lnot A\lor \lnot B$&$\lnot(\lnot A\lor \lnot B)$&$A\land\lnot(\lnot A\lor \lnot B)$\\\hline
+F&F&&&&&\\\hline
+F&T&&&&&\\\hline
+T&F&&&&&\\\hline
+T&T&&&&&\\\hline
+\end{tabular}
+\end{center}
+}
+\frame{
+\frametitle{C.$A\land\lnot(\lnot A\lor \lnot B)$}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+A&B&$\lnot A$&$\lnot B$&$\lnot A\lor \lnot B$&$\lnot(\lnot A\lor \lnot B)$&$A\land\lnot(\lnot A\lor \lnot B)$\\\hline
+F&F&T&&&&\\\hline
+F&T&T&&&&\\\hline
+T&F&F&&&&\\\hline
+T&T&F&&&&\\\hline
+\end{tabular}
+\end{center}
+}
+\frame{
+\frametitle{C.$A\land\lnot(\lnot A\lor \lnot B)$}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+A&B&$\lnot A$&$\lnot B$&$\lnot A\lor \lnot B$&$\lnot(\lnot A\lor \lnot B)$&$A\land\lnot(\lnot A\lor \lnot B)$\\\hline
+F&F&T&T&&&\\\hline
+F&T&T&F&&&\\\hline
+T&F&F&T&&&\\\hline
+T&T&F&F&&&\\\hline
+\end{tabular}
+\end{center}
+}
+\frame{
+\frametitle{C.$A\land\lnot(\lnot A\lor \lnot B)$}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+A&B&$\lnot A$&$\lnot B$&$\lnot A\lor \lnot B$&$\lnot(\lnot A\lor \lnot B)$&$A\land\lnot(\lnot A\lor \lnot B)$\\\hline
+F&F&T&T&T&&\\\hline
+F&T&T&F&T&&\\\hline
+T&F&F&T&T&&\\\hline
+T&T&F&F&F&&\\\hline
+\end{tabular}
+\end{center}
+}
+\frame{
+\frametitle{C.$A\land\lnot(\lnot A\lor \lnot B)$}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+A&B&$\lnot A$&$\lnot B$&$\lnot A\lor \lnot B$&$\lnot(\lnot A\lor \lnot B)$&$A\land\lnot(\lnot A\lor \lnot B)$\\\hline
+F&F&T&T&T&F&\\\hline
+F&T&T&F&T&F&\\\hline
+T&F&F&T&T&F&\\\hline
+T&T&F&F&F&T&\\\hline
+\end{tabular}
+\end{center}
+}
+\frame{
+\frametitle{C.$A\land\lnot(\lnot A\lor \lnot B)$}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+A&B&$\lnot A$&$\lnot B$&$\lnot A\lor \lnot B$&$\lnot(\lnot A\lor \lnot B)$&$A\land\lnot(\lnot A\lor \lnot B)$\\\hline
+F&F&T&T&T&F&F\\\hline
+F&T&T&F&T&F&F\\\hline
+T&F&F&T&T&F&F\\\hline
+T&T&F&F&F&T&T\\\hline
+\end{tabular}
+\end{center}
+}
+\frame{
+\frametitle{D.$A\land B\rightarrow\lnot A$}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+A&B&$\lnot A$&$A\land B$&$A\land B\rightarrow\lnot A$\\\hline
+F&F&&&\\\hline
+F&T&&&\\\hline
+T&F&&&\\\hline
+T&T&&&\\\hline
+\end{tabular}
+\end{center}
+}
+\frame{
+\frametitle{D.$A\land B\rightarrow\lnot A$}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+A&B&$\lnot A$&$A\land B$&$A\land B\rightarrow\lnot A$\\\hline
+F&F&T&&\\\hline
+F&T&T&&\\\hline
+T&F&F&&\\\hline
+T&T&F&&\\\hline
+\end{tabular}
+\end{center}
+}
+\frame{
+\frametitle{D.$A\land B\rightarrow\lnot A$}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+A&B&$\lnot A$&$A\land B$&$A\land B\rightarrow\lnot A$\\\hline
+F&F&T&F&\\\hline
+F&T&T&F&\\\hline
+T&F&F&F&\\\hline
+T&T&F&T&\\\hline
+\end{tabular}
+\end{center}
+}
+\frame{
+\frametitle{D.$A\land B\rightarrow\lnot A$}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+A&B&$\lnot A$&$A\land B$&$A\land B\rightarrow\lnot A$\\\hline
+F&F&T&F&T\\\hline
+F&T&T&F&T\\\hline
+T&F&F&F&T\\\hline
+T&T&F&T&F\\\hline
+\end{tabular}
+\end{center}
+}
+\frame{
+\frametitle{E.$(A\rightarrow B)\rightarrow[(A\lor C)\rightarrow(B\lor C)]$}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+A&B&C&$A\lor C$&$B\lor C$&$A\rightarrow B$&$(A\lor C)\rightarrow(B\lor C)$\\\hline
+F&F&F&&&&\\\hline
+F&F&T&&&&\\\hline
+F&T&F&&&&\\\hline
+F&T&T&&&&\\\hline
+T&F&F&&&&\\\hline
+T&F&T&&&&\\\hline
+T&T&F&&&&\\\hline
+T&T&T&&&&\\\hline
+\end{tabular}
+\end{center}
+}
+\frame{
+\frametitle{E.$(A\rightarrow B)\rightarrow[(A\lor C)\rightarrow(B\lor C)]$}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+A&B&C&$A\lor C$&$B\lor C$&$A\rightarrow B$&$(A\lor C)\rightarrow(B\lor C)$\\\hline
+F&F&F&F&&&\\\hline
+F&F&T&T&&&\\\hline
+F&T&F&F&&&\\\hline
+F&T&T&T&&&\\\hline
+T&F&F&T&&&\\\hline
+T&F&T&T&&&\\\hline
+T&T&F&T&&&\\\hline
+T&T&T&T&&&\\\hline
+\end{tabular}
+\end{center}
+}
+\frame{
+\frametitle{E.$(A\rightarrow B)\rightarrow[(A\lor C)\rightarrow(B\lor C)]$}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+A&B&C&$A\lor C$&$B\lor C$&$A\rightarrow B$&$(A\lor C)\rightarrow(B\lor C)$\\\hline
+F&F&F&F&F&&\\\hline
+F&F&T&T&T&&\\\hline
+F&T&F&F&T&&\\\hline
+F&T&T&T&T&&\\\hline
+T&F&F&T&F&&\\\hline
+T&F&T&T&T&&\\\hline
+T&T&F&T&T&&\\\hline
+T&T&T&T&T&&\\\hline
+\end{tabular}
+\end{center}
+}
+\frame{
+\frametitle{E.$(A\rightarrow B)\rightarrow[(A\lor C)\rightarrow(B\lor C)]$}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+A&B&C&$A\lor C$&$B\lor C$&$A\rightarrow B$&$(A\lor C)\rightarrow(B\lor C)$\\\hline
+F&F&F&F&F&T&\\\hline
+F&F&T&T&T&T&\\\hline
+F&T&F&F&T&T&\\\hline
+F&T&T&T&T&T&\\\hline
+T&F&F&T&F&F&\\\hline
+T&F&T&T&T&F&\\\hline
+T&T&F&T&T&T&\\\hline
+T&T&T&T&T&T&\\\hline
+\end{tabular}
+\end{center}
+}
+\frame{
+\frametitle{E.$(A\rightarrow B)\rightarrow[(A\lor C)\rightarrow(B\lor C)]$}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+A&B&C&$A\lor C$&$B\lor C$&$A\rightarrow B$&$(A\lor C)\rightarrow(B\lor C)$\\\hline
+F&F&F&F&F&T&T\\\hline
+F&F&T&T&T&T&T\\\hline
+F&T&F&F&T&T&T\\\hline
+F&T&T&T&T&T&T\\\hline
+T&F&F&T&F&F&F\\\hline
+T&F&T&T&T&F&T\\\hline
+T&T&F&T&T&T&T\\\hline
+T&T&T&T&T&T&T\\\hline
+\end{tabular}
+\end{center}
+}
+\frame{
+\frametitle{E.$(A\rightarrow B)\rightarrow[(A\lor C)\rightarrow(B\lor C)]$}
+\begin{center}
+\begin{tabular}{|c|}
+\hline
+$(A\rightarrow B)\rightarrow[(A\lor C)\rightarrow(B\lor C)]$\\\hline
+T\\\hline
+T\\\hline
+T\\\hline
+T\\\hline
+T\\\hline
+T\\\hline
+T\\\hline
+T\\\hline
+\end{tabular}
+\end{center}
+}
+\frame{
+\frametitle{F.$A\rightarrow(B\rightarrow A)$}
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+A&B&$B\rightarrow A$&$A\rightarrow(B\rightarrow A)$\\\hline
+F&F&&\\\hline
+F&T&&\\\hline
+T&F&&\\\hline
+T&T&&\\\hline
+\end{tabular}
+\end{center}
+}
+\frame{
+\frametitle{F.$A\rightarrow(B\rightarrow A)$}
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+A&B&$B\rightarrow A$&$A\rightarrow(B\rightarrow A)$\\\hline
+F&F&T&\\\hline
+F&T&F&\\\hline
+T&F&T&\\\hline
+T&T&T&\\\hline
+\end{tabular}
+\end{center}
+}
+\frame{
+\frametitle{F.$A\rightarrow(B\rightarrow A)$}
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+A&B&$B\rightarrow A$&$A\rightarrow(B\rightarrow A)$\\\hline
+F&F&T&T\\\hline
+F&T&F&T\\\hline
+T&F&T&T\\\hline
+T&T&T&T\\\hline
+\end{tabular}
+\end{center}
+}
+\frame{
+\frametitle{G.$(A\land B)\leftrightarrow(\lnot B\lor\lnot A)$}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+A&B&$\lnot A$&$\lnot B$&$A\land B$&$\lnot B\lor\lnot A$&$(A\land B)\leftrightarrow(\lnot B\lor\lnot A)$\\\hline
+F&F&&&&&\\\hline
+F&T&&&&&\\\hline
+T&F&&&&&\\\hline
+T&T&&&&&\\\hline
+\end{tabular}
+\end{center}
+}
+\frame{
+\frametitle{G.$(A\land B)\leftrightarrow(\lnot B\lor\lnot A)$}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+A&B&$\lnot A$&$\lnot B$&$A\land B$&$\lnot B\lor\lnot A$&$(A\land B)\leftrightarrow(\lnot B\lor\lnot A)$\\\hline
+F&F&T&&&&\\\hline
+F&T&T&&&&\\\hline
+T&F&F&&&&\\\hline
+T&T&F&&&&\\\hline
+\end{tabular}
+\end{center}
+}
+\frame{
+\frametitle{G.$(A\land B)\leftrightarrow(\lnot B\lor\lnot A)$}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+A&B&$\lnot A$&$\lnot B$&$A\land B$&$\lnot B\lor\lnot A$&$(A\land B)\leftrightarrow(\lnot B\lor\lnot A)$\\\hline
+F&F&T&T&&&\\\hline
+F&T&T&F&&&\\\hline
+T&F&F&T&&&\\\hline
+T&T&F&F&&&\\\hline
+\end{tabular}
+\end{center}
+}
+\frame{
+\frametitle{G.$(A\land B)\leftrightarrow(\lnot B\lor\lnot A)$}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+A&B&$\lnot A$&$\lnot B$&$A\land B$&$\lnot B\lor\lnot A$&$(A\land B)\leftrightarrow(\lnot B\lor\lnot A)$\\\hline
+F&F&T&T&F&&\\\hline
+F&T&T&F&F&&\\\hline
+T&F&F&T&F&&\\\hline
+T&T&F&F&T&&\\\hline
+\end{tabular}
+\end{center}
+}
+\frame{
+\frametitle{G.$(A\land B)\leftrightarrow(\lnot B\lor\lnot A)$}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+A&B&$\lnot A$&$\lnot B$&$A\land B$&$\lnot B\lor\lnot A$&$(A\land B)\leftrightarrow(\lnot B\lor\lnot A)$\\\hline
+F&F&T&T&F&T&\\\hline
+F&T&T&F&F&T&\\\hline
+T&F&F&T&F&T&\\\hline
+T&T&F&F&T&F&\\\hline
+\end{tabular}
+\end{center}
+}
+\frame{
+\frametitle{G.$(A\land B)\leftrightarrow(\lnot B\lor\lnot A)$}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+A&B&$\lnot A$&$\lnot B$&$A\land B$&$\lnot B\lor\lnot A$&$(A\land B)\leftrightarrow(\lnot B\lor\lnot A)$\\\hline
+F&F&T&T&F&T&F\\\hline
+F&T&T&F&F&T&F\\\hline
+T&F&F&T&F&T&F\\\hline
+T&T&F&F&T&F&F\\\hline
+\end{tabular}
+\end{center}
+}
+\frame{
+\frametitle{Exercícios seção 2.4.11}
+\begin{block}{3.}
+Suponha que você possua um algoritmo que a partir de uma fórmula $\alpha$ da lógica responda sim se esta é satisfazível e não caso contrário. Explique como usar esse algoritmo para determinar se uma fórmula é uma\newline
+\begin{itemize}
+\item Tautologia
+\item Contradição
+\end{itemize}
+\end{block}
+}
+\end{document}
