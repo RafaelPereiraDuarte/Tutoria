@@ -1,0 +1,65 @@
+\documentclass{Beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usetheme{Marburg}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\title{Tutoria de Matematica Discreta}
+\author{Rafael Pereira Duarte}
+
+
+\begin{document}
+\section{Exercício 2.7.3}
+\title{Tutoria de Matemática Discreta}
+\subtitle{Coordenador Rodrigo Geraldo Ribeiro}
+\author[R.Duarte]{Rafael Pereira Duarte}
+\institute[UFOP]{
+  Departamento de Computa\c{c}\~ao e Sistemas\\
+  Universidade de Federal de Ouro Preto
+}
+\begin{frame}[plain]
+		\titlepage
+	\end{frame}
+\frame{
+\frametitle{Exercícios seção 2.7.3}
+\begin{block}{1.}
+Para cada uma das fórmulas a seguir, apresente as fórmulas equivalentes na forma normal conjuntiva e disjuntiva
+\end{block}
+}
+\frame{
+\begin{block}{c.}
+$A\land B\rightarrow\lnot A$
+\end{block}
+}
+\frame{
+\begin{block}{c.}
+$A\land B\rightarrow\lnot A\newline\lnot(A\land B)\lor\lnot A$
+\end{block}
+}
+\frame{
+\begin{block}{c.}
+$A\land B\rightarrow\lnot A\newline\lnot(A\land B)\lor\lnot A\newline \lnot A\lor\lnot B \lor\lnot A$
+\end{block}
+}
+\frame{
+\begin{block}{c.}
+$A\land B\rightarrow\lnot A\newline\lnot(A\land B)\lor\lnot A\newline \lnot A\lor\lnot B \lor\lnot A\newline\lnot B\lor\lnot A$
+\end{block}
+}
+\frame{
+\begin{block}{e.}
+$A\rightarrow(B\rightarrow A)$
+\end{block}
+}
+\frame{
+\begin{block}{e.}
+$A\rightarrow(B\rightarrow A)\newline A\rightarrow(\lnot B\lor A)$
+\end{block}
+}
+\frame{
+\begin{block}{e.}
+$A\rightarrow(B\rightarrow A)\newline A\rightarrow(\lnot B\lor A)\newline\lnot A\lor(\lnot B\lor A)$
+\end{block}
+}
+\end{document}
