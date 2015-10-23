@@ -1,0 +1,262 @@
+\documentclass{Beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usetheme{Berkeley}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\title{Tutoria de Matematica Discreta}
+\author{Rafael Pereira Duarte}
+
+
+\begin{document}
+\section{Exercício 2.3.1}
+\title{Tutoria de Matemática Discreta}
+\subtitle{Coordenador Rodrigo Geraldo Ribeiro}
+\author[R.Duarte]{Rafael Pereira Duarte}
+\institute[UFOP]{
+  Departamento de Computa\c{c}\~ao e Sistemas\\
+  Universidade de Federal de Ouro Preto
+}
+\begin{frame}[plain]
+		\titlepage
+	\end{frame}
+\frame{
+\frametitle{Exercícios seção 2.3.1}
+\begin{block}{1.}
+Para cada um dos termos a seguir, use a definição de fórmulas bem formadas para justificar o porquê estas podem ser consideradas fórmulas bem formadas
+\end{block}
+}
+\frame{
+\frametitle{Fórmulas Bem Formadas}
+\begin{block}{Definição}
+O conjunto $\digamma$ de fórmulas bem formadas da lógica proposicional é difinido recursivamente da seguinte maneira\newline\newline
+1. As constantes lógicas$ \top, \bot \in \digamma$ e denotam verdadeiro e falso respectivamente\newline\newline
+2. Seja $\upsilon$ o conjunto infinito de variáveis proposicionais. Então $\upsilon \subseteq \digamma$\newline\newline
+3. Se $\alpha,\beta \in \digamma$, então:
+\begin{itemize}
+\item (a) $\lnot\alpha \in \digamma$.
+\item (b) $\alpha\circ\beta \in \digamma$, em que $\circ \in \{\land,\lor,\rightarrow,\leftrightarrow\}$
+\item (c) $\alpha \in \digamma$
+\end{itemize} 
+\end{block}
+}
+\frame{\frametitle{\begin{itemize}
+\item A
+\end{itemize}}
+\begin{block}{Fórmula}
+$\lnot A\land B\rightarrow C \newline $
+\end{block}
+}
+\frame{\frametitle{\begin{itemize}
+\item A
+\end{itemize}}
+\begin{block}{Fórmula}
+$\lnot A\land B\rightarrow C \newline 
+\lnot A\circ B\rightarrow C \newline$
+\end{block}
+}
+\frame{\frametitle{\begin{itemize}
+\item A
+\end{itemize}}
+\begin{block}{Fórmula}
+$\lnot A\land B\rightarrow C \newline 
+\lnot A\circ B\rightarrow C \newline
+\lnot A\circ B\circ C\newline$
+\end{block}
+}
+\frame{\frametitle{\begin{itemize}
+\item A
+\end{itemize}}
+\begin{block}{Fórmula}
+$\lnot A\land B\rightarrow C \newline 
+\lnot A\circ B\rightarrow C \newline
+\lnot A\circ B\circ C\newline
+\alpha\circ\beta\circ\gamma$
+\end{block}
+}
+\frame{\frametitle{\begin{itemize}
+\item B
+\end{itemize}}
+\begin{block}{Fórmula}
+$ (A\rightarrow B)\land\lnot(A\lor B\rightarrow C) \newline $
+\end{block}
+}
+\frame{\frametitle{\begin{itemize}
+\item B
+\end{itemize}}
+\begin{block}{Fórmula}
+$ (A\rightarrow B)\land\lnot(A\lor B\rightarrow C) \newline
+(A\circ B)\land\lnot(A\circ B \circ C)  $
+\end{block}
+}
+\frame{\frametitle{\begin{itemize}
+\item B
+\end{itemize}}
+\begin{block}{Fórmula}
+$ (A\rightarrow B)\land\lnot(A\lor B\rightarrow C) \newline
+(A\circ B)\land\lnot(A\circ B \circ C) \newline
+\alpha\land\lnot \gamma \newline$
+\end{block}
+}
+\frame{\frametitle{\begin{itemize}
+\item B
+\end{itemize}}
+\begin{block}{Fórmula}
+$ (A\rightarrow B)\land\lnot(A\lor B\rightarrow C) \newline
+(A\circ B)\land\lnot(A\circ B \circ C) \newline
+\alpha\land\lnot \gamma \newline
+\alpha \circ \beta $
+\end{block}
+}
+\frame{\frametitle{\begin{itemize}
+\item C
+\end{itemize}}
+\begin{block}{Fórmula}
+$A\rightarrow B\rightarrow C\leftrightarrow\bot $
+\end{block}
+}
+\frame{\frametitle{\begin{itemize}
+\item C
+\end{itemize}}
+\begin{block}{Fórmula}
+$A\rightarrow B\rightarrow C\leftrightarrow\bot \newline
+A\circ B\circ C \circ \bot$
+\end{block}
+}
+\frame{\frametitle{\begin{itemize}
+\item C
+\end{itemize}}
+\begin{block}{Fórmula}
+$A\rightarrow B\rightarrow C\leftrightarrow\bot \newline
+A\circ B\circ C \circ \bot\newline
+\alpha\circ\beta\circ\gamma\circ\bot$
+\end{block}
+}
+\frame{\frametitle{\begin{itemize}
+\item D
+\end{itemize}}
+\begin{block}{Fórmula}
+$A\land\lnot A\rightarrow B$
+\end{block}
+}
+\frame{\frametitle{\begin{itemize}
+\item D
+\end{itemize}}
+\begin{block}{Fórmula}
+$A\land\lnot A\rightarrow B \newline
+A\circ\lnot A\circ B$
+\end{block}
+}
+\frame{\frametitle{\begin{itemize}
+\item D
+\end{itemize}}
+\begin{block}{Fórmula}
+$A\land\lnot A\rightarrow B \newline
+A\circ\lnot A\circ B \newline
+\alpha\circ\beta\circ\gamma$
+\end{block}
+}
+\frame{\frametitle{\begin{itemize}
+\item E
+\end{itemize}}
+\begin{block}{Fórmula}
+$A\lor B\land C$
+\end{block}
+}
+\frame{\frametitle{\begin{itemize}
+\item E
+\end{itemize}}
+\begin{block}{Fórmula}
+$A\lor B\land C\newline
+A\circ B\circ C$
+\end{block}
+}
+\frame{\frametitle{\begin{itemize}
+\item E
+\end{itemize}}
+\begin{block}{Fórmula}
+$A\lor B\land C\newline
+A\circ B\circ C\newline
+\alpha\circ\beta\circ\gamma$
+\end{block}
+}
+\frame{
+\frametitle{Exercícios seção 2.3.1}
+\begin{block}{3.}
+Para cada uma das fórmulas seguintes, elimine os parênteses desnecessários.
+\end{block}
+}
+\frame{\frametitle{\begin{itemize}
+\item A
+\end{itemize}}
+\begin{block}{Fórmula}
+$((A\lor B)\lor(C\lor D))$
+\end{block}
+}
+\frame{\frametitle{\begin{itemize}
+\item A
+\end{itemize}}
+\begin{block}{Fórmula}
+$((A\lor B)\lor(C\lor D))\newline
+(A\lor B)\lor(C\lor D)$
+\end{block}
+}
+\frame{\frametitle{\begin{itemize}
+\item B
+\end{itemize}}
+\begin{block}{Fórmula}
+$(A\rightarrow(B\rightarrow(A\land B)))$
+\end{block}
+}
+\frame{\frametitle{\begin{itemize}
+\item B
+\end{itemize}}
+\begin{block}{Fórmula}
+$(A\rightarrow(B\rightarrow(A\land B)))\newline
+(A\rightarrow(B\rightarrow A\land B))$
+\end{block}
+}
+\frame{\frametitle{\begin{itemize}
+\item B
+\end{itemize}}
+\begin{block}{Fórmula}
+$(A\rightarrow(B\rightarrow(A\land B)))\newline
+(A\rightarrow(B\rightarrow A\land B))\newline
+(A\rightarrow B\rightarrow A\land B)$
+\end{block}
+}
+
+\frame{\frametitle{\begin{itemize}
+\item B
+\end{itemize}}
+\begin{block}{Fórmula}
+$(A\rightarrow(B\rightarrow(A\land B)))\newline
+(A\rightarrow(B\rightarrow A\land B))\newline
+(A\rightarrow B\rightarrow A\land B)\newline
+A\rightarrow B\rightarrow A\land B$
+\end{block}
+}
+\frame{\frametitle{\begin{itemize}
+\item C
+\end{itemize}}
+\begin{block}{Fórmula}
+$\lnot(A\lor(B\land C))$
+\end{block}
+}
+\frame{\frametitle{\begin{itemize}
+\item C
+\end{itemize}}
+\begin{block}{Fórmula}
+$\lnot(A\lor(B\land C))\newline
+\lnot(A\lor B\land C)$
+\end{block}
+}
+\frame{\frametitle{\begin{itemize}
+\item D
+\end{itemize}}
+\begin{block}{Fórmula}
+$\lnot(A\land(B\lor C))$
+\end{block}
+}
+\end{document}
